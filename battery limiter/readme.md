@@ -27,7 +27,7 @@ The script utilizes Windows PowerShell commands to modify the battery charge set
 ## Flowchart
 
 ```mermaid
-graph TD
+graph LR
 A[Start] --> B[Input Desired Charge Percentage]
 B --> C{Validate Input}
 C -- Valid --> D[Set Maximum Battery Charge Level]
