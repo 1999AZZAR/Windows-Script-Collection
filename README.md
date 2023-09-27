@@ -38,4 +38,16 @@
 
 ---
 
+## [File Organization Automation](<file-organization/readme.md>)
+
+**Description:** Automate file organization by categorizing files based on type and age.
+
+**How It Works:** Choose between a .bat or .ps1 file to categorize files and move older files to an archive folder.
+
+**How to Use:**
+- For .bat: Run as administrator.
+- For .ps1: Run in PowerShell with admin privileges.
+
+---
+
 These scripts provide straightforward solutions to customize your Windows system settings.
