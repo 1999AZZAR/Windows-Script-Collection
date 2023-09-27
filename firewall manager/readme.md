@@ -67,9 +67,14 @@ Two options:
 ## Flowchart 
 
 ```mermaid
-graph TD
+graph LR
+
+    subgraph main
     A[Start] --> B[Get Script Directory]
     B --> C[Ask User Action]
+    end
+
+    subgraph loop
     C --> D[Block Rules]
     D --> E[Remove Rules]
     E --> F[Display Status]
@@ -77,6 +82,7 @@ graph TD
     G --> E
     E --> H[Script Completed]
     H --> I[Done]
+    end
 ```
 
 ## Disclaimer
