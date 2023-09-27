@@ -38,7 +38,7 @@
 
 ---
 
-## [File Organization Automation](<file-organization/readme.md>)
+## [File Organization Automation](<file organizer/readme.md>)
 
 **Description:** Automate file organization by categorizing files based on type and age.
 
