@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTL Setting Scripts README</title>
+    <link rel="icon" type="image/x-icon" href="https://1999azzar.github.io/gpt-advance-prompt/web/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://1999azzar.github.io/gpt-advance-prompt/web/style/style.css">
+</head>
+
+<body>
+    <h1 id="ttl-setting-scripts-readme"><a href="../index.html">TTL Setting Scripts README</a></h1>
+    <p>
+        These scripts allow you to set the TTL (Time to Live) value on your Windows machine. TTL is an important network parameter that affects how long data packets are valid before being discarded.
+    </p>
+
+    <h2 id="how-they-work">How They Work</h2>
+    <p>Both scripts follow a similar process:</p>
+    <ol>
+        <li>Run the script with administrator privileges.</li>
+        <li>Choose from three TTL options: 64, 128, or Custom.</li>
+        <li>If you select "Custom," enter your desired TTL value.</li>
+        <li>The script will set the chosen TTL value in the Windows Registry.</li>
+    </ol>
+
+    <h2 id="how-to-use">How to Use</h2>
+
+    <h3 id="using-set_ttl-bat-batch-script-">Using set_ttl.bat (Batch Script)</h3>
+    <ol>
+        <li>Save the script as <code>set_ttl.bat</code>.</li>
+        <li>Right-click on it and choose "Run as administrator."</li>
+        <li>Follow the on-screen instructions to set the TTL value.</li>
+    </ol>
+
+    <h3 id="using-set_ttl-ps1-powershell-script-">Using set_ttl.ps1 (PowerShell Script)</h3>
+    <ol>
+        <li>Save the script as <code>set_ttl.ps1</code>.</li>
+        <li>Open PowerShell as an administrator.</li>
+        <li>Navigate to the folder where the script is saved.</li>
+        <li>Run the script by typing <code>.\set_ttl.ps1</code>.</li>
+        <li>Follow the on-screen prompts to set the TTL value.</li>
+    </ol>
+
+    <h2 id="flowchart">Flowchart</h2>
+    
+    <p>Here's a visual representation of how these scripts work:</p>
+    <pre class="mermaid">
+        graph LR
+
+        A[Start] --> B[Run Script]
+        B --> C{Choose TTL}
+        C -->|64| D[Set TTL to 64]
+        C -->|128| E[Set TTL to 128]
+        C -->|Custom| F[Enter Custom TTL]
+        F --> G[Set Custom TTL]
+        G --> H[Finish]
+        D --> H
+        E --> H
+        H --> I[End]
+    </pre>
+
+    <hr>
+
+    <p>These scripts provide an easy way to configure TTL settings on your Windows machine, enhancing your control over network packet lifetimes.</p>
+   
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    </script>
+
+</body>
+</html>
