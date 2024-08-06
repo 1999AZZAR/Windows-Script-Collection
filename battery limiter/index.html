@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Charge Limiter</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Battery Charge Limiter</h1>
+
+        <h2>Description</h2>
+        <p>This script allows you to set the maximum battery charge level on your Windows machine. It provides a user-friendly way to input your desired battery charge percentage and applies the setting using either a .bat or .ps1 file.</p>
+
+        <h2>How it Works</h2>
+        <p>The script utilizes Windows PowerShell commands to modify the battery charge settings. It prompts the user to input their desired charge percentage, validates the input to ensure it falls within the allowable range (50% to 100%), and then sets the maximum battery charge accordingly.</p>
+
+        <h2>How to Use</h2>
+
+        <div class="script-section">
+            <h3>Using .bat (Batch) File</h3>
+            <ol>
+                <li>Save the "bat_limiter.bat" file to your computer.</li>
+                <li>Right-click the file and choose "Run as administrator" to ensure it has the necessary privileges.</li>
+                <li>Follow the on-screen instructions to input your desired battery charge percentage.</li>
+            </ol>
+        </div>
+
+        <div class="script-section">
+            <h3>Using .ps1 (PowerShell) Script</h3>
+            <ol>
+                <li>Save the "bat_limiter.ps1" file to your computer.</li>
+                <li>Open PowerShell with administrative privileges (right-click on PowerShell and choose "Run as administrator").</li>
+                <li>Navigate to the directory where you saved the script using the <code>cd</code> command.</li>
+                <li>Execute the script by running <code>.\bat_limiter.ps1</code>.</li>
+                <li>Follow the on-screen instructions to input your desired battery charge percentage.</li>
+            </ol>
+        </div>
+
+        <h2>Flowchart</h2>
+        <pre class="mermaid">
+graph LR
+A[Start] --> B[Input Desired Charge Percentage]
+B --> C{Validate Input}
+C -- Valid --> D[Set Maximum Battery Charge Level]
+C -- Invalid --> E[Display Error Message]
+D --> F[Apply Changes]
+F --> G[End]
+E --> A
+        </pre>
+
+        <h2>Note</h2>
+        <ul>
+            <li>Ensure you run the script or .bat file with administrative privileges for it to modify the battery charge settings successfully.</li>
+            <li>The valid charge percentage range is from 50% to 100%. Input outside this range will result in an error message.</li>
+            <li>Please note that this script uses a specific GUID (<code>5dd8f6e0-7d83-4c3e-bfcb-00b0c98b9b09</code>) for the battery setting, which may vary depending on your system. Ensure that it works correctly on your machine. If you encounter issues, consult your system documentation or modify the script with the appropriate GUID for your system.</li>
+        </ul>
+
+        <footer>
+            <a href="https://www.buymeacoffee.com/azzar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="coffee-button"></a>
+        </footer>
+    </div>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>

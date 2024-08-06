@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firewall Rule Management</title>
-    <link rel="icon" type="image/x-icon" href="https://1999azzar.github.io/gpt-advance-prompt/web/img/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://1999azzar.github.io/gpt-advance-prompt/web/style/style.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
-
 <body>
-    <h1 id="firewall-rule-management"><a href="../index.html">Firewall Rule Management</a></h1>
-    
-    <h2 id="overview">Overview</h2>
-    <p>
-        This set of scripts lets you manage Windows Firewall rules for specific .exe files. Choose to block or remove firewall rules for .exe files in the same directory as the script, enhancing system security.
-    </p>
+    <div class="container">
+        <h1 id="firewall-rule-management"><a href="../index.html">Firewall Rule Management</a></h1>
+        
+        <h2 id="overview">Overview</h2>
+        <p>
+            This set of scripts lets you manage Windows Firewall rules for specific .exe files. Choose to block or remove firewall rules for .exe files in the same directory as the script, enhancing system security.
+        </p>
 
-    <h2 id="prerequisites">Prerequisites</h2>
-    <ul>
-        <li>For Windows operating systems.</li>
-        <li>Administrative privileges to manage Windows Firewall rules.</li>
-        <li>Familiarity with running scripts on Windows.</li>
-    </ul>
+        <h2 id="prerequisites">Prerequisites</h2>
+        <ul>
+            <li>For Windows operating systems.</li>
+            <li>Administrative privileges to manage Windows Firewall rules.</li>
+            <li>Familiarity with running scripts on Windows.</li>
+        </ul>
 
-    <h2 id="choose-a-script">Choose a Script</h2>
-    <p>Two options:</p>
-    <ol>
-        <li>
-            <p><strong>Batch Script (.bat)</strong>: Simple and user-friendly. Name: <code>fw_rule_manager.bat</code>.</p>
-        </li>
-        <li>
-            <p><strong>PowerShell Script (.ps1)</strong>: Offers advanced functionality. Name: <code>fw_rule_manager.ps1</code>.</p>
-        </li>
-    </ol>
+        <h2 id="choose-a-script">Choose a Script</h2>
+        <p>Two options:</p>
+        <div class="script-section">
+            <h3>1. Batch Script (.bat)</h3>
+            <p>Simple and user-friendly. Name: <code>fw_rule_manager.bat</code>.</p>
+        </div>
+        <div class="script-section">
+            <h3>2. PowerShell Script (.ps1)</h3>
+            <p>Offers advanced functionality. Name: <code>fw_rule_manager.ps1</code>.</p>
+        </div>
 
-    <h2 id="how-it-works">How It Works</h2>
-    <p><strong>Batch Script (.bat)</strong>:</p>
-    <ol>
-        <li>Detects the script's directory.</li>
-        <li>Asks to block or remove firewall rules.</li>
-        <li>Adds outbound and inbound rules to block or removes existing rules for each .exe file.</li>
-    </ol>
-    <p><strong>PowerShell Script (.ps1)</strong>:</p>
-    <ol>
-        <li>Gets the script's directory.</li>
-        <li>Asks to block or remove firewall rules.</li>
-        <li>Adds outbound and inbound rules to block or removes existing rules for each .exe file.</li>
-    </ol>
+        <h2 id="how-it-works">How It Works</h2>
+        <div class="script-section">
+            <h3>Batch Script (.bat)</h3>
+            <ol>
+                <li>Detects the script's directory.</li>
+                <li>Asks to block or remove firewall rules.</li>
+                <li>Adds outbound and inbound rules to block or removes existing rules for each .exe file.</li>
+            </ol>
+        </div>
+        <div class="script-section">
+            <h3>PowerShell Script (.ps1)</h3>
+            <ol>
+                <li>Gets the script's directory.</li>
+                <li>Asks to block or remove firewall rules.</li>
+                <li>Adds outbound and inbound rules to block or removes existing rules for each .exe file.</li>
+            </ol>
+        </div>
 
-    <h2 id="how-to-use-the-batch-script-bat-">How to Use the Batch Script (.bat)</h2>
-    <ol>
-        <li><p><strong>Download</strong> <code>fw_manager.bat</code>.</p></li>
-        <li><p><strong>Save</strong> it in the directory with .exe files.</p></li>
-        <li><p><strong>Run</strong> by double-clicking or command prompt.</p></li>
-        <li><p><strong>Choose Action</strong>: 1 to block, 2 to remove.</p></li>
-        <li><p><strong>Script Execution</strong>: Auto-detects and processes .exe files.</p></li>
-        <li><p><strong>Done</strong>: Displays "Done" and pauses for review.</p></li>
-    </ol>
+        <h2 id="how-to-use">How to Use</h2>
+        <div class="script-section">
+            <h3>Batch Script (.bat)</h3>
+            <ol>
+                <li><strong>Download</strong> <code>fw_manager.bat</code>.</li>
+                <li><strong>Save</strong> it in the directory with .exe files.</li>
+                <li><strong>Run</strong> by double-clicking or command prompt.</li>
+                <li><strong>Choose Action</strong>: 1 to block, 2 to remove.</li>
+                <li><strong>Script Execution</strong>: Auto-detects and processes .exe files.</li>
+                <li><strong>Done</strong>: Displays "Done" and pauses for review.</li>
+            </ol>
+        </div>
+        <div class="script-section">
+            <h3>PowerShell Script (.ps1)</h3>
+            <ol>
+                <li><strong>Download</strong> <code>fw_manager.ps1</code>.</li>
+                <li><strong>Save</strong> it anywhere.</li>
+                <li><strong>Run</strong> in PowerShell with admin privileges.</li>
+                <li><strong>Navigate</strong> to script's directory (if needed).</li>
+                <li><strong>Execute</strong> with <code>.\fw_manager.ps1</code>.</li>
+                <li><strong>Choose Action</strong>: 1 to block, 2 to remove.</li>
+                <li><strong>Script Execution</strong>: Auto-detects and processes .exe files.</li>
+                <li><strong>Done</strong>: Displays "Done."</li>
+            </ol>
+        </div>
 
-    <h2 id="how-to-use-the-powershell-script-ps1-">How to Use the PowerShell Script (.ps1)</h2>
-    <ol>
-        <li><p><strong>Download</strong> <code>fw_manager.ps1</code>.</p></li>
-        <li><p><strong>Save</strong> it anywhere.</p></li>
-        <li><p><strong>Run</strong> in PowerShell with admin privileges.</p></li>
-        <li><p><strong>Navigate</strong> to script's directory (if needed).</p></li>
-        <li><p><strong>Execute</strong> with <code>.\fw_manager.ps1</code>.</p></li>
-        <li><p><strong>Choose Action</strong>: 1 to block, 2 to remove.</p></li>
-        <li><p><strong>Script Execution</strong>: Auto-detects and processes .exe files.</p></li>
-        <li><p><strong>Done</strong>: Displays "Done."</p></li>
-    </ol>
-
-    <h2 id="flowchart">Flowchart</h2>
-
-    <pre class="mermaid">
+        <h2 id="flowchart">Flowchart</h2>
+        <pre class="mermaid">
         graph LR
 
         subgraph main
@@ -100,21 +102,23 @@
         K -- no --> H[Script Completed]
         H --> I[Done]
         end
-    </pre>
+        </pre>
 
-    <h2 id="disclaimer">Disclaimer</h2>
-    <ul>
-        <li>Use these scripts responsibly with necessary permissions.</li>
-        <li>Caution when modifying firewall rules; it affects network access for applications.</li>
-    </ul>
+        <h2 id="disclaimer">Disclaimer</h2>
+        <ul>
+            <li>Use these scripts responsibly with necessary permissions.</li>
+            <li>Caution when modifying firewall rules; it affects network access for applications.</li>
+        </ul>
 
-    <hr>
-
-    <p>Select the script that suits your needs and follow the provided instructions to manage Windows Firewall rules for .exe files.</p>
+        <footer>
+            <p>Select the script that suits your needs and follow the provided instructions to manage Windows Firewall rules for .exe files.</p>
+            <a href="https://www.buymeacoffee.com/azzar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="coffee-button"></a>
+        </footer>
+    </div>
 
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
     </script>
-
 </body>
 </html>
