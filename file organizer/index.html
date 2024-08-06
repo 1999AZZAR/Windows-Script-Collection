@@ -1,139 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Organization Automation Script</title>
     <link rel="icon" type="image/x-icon" href="https://1999azzar.github.io/gpt-advance-prompt/web/img/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://1999azzar.github.io/gpt-advance-prompt/web/style/style.css">
 </head>
-
 <body>
-    <h1 id="file-organization-automation-script-readme"><a href="../index.html">File Organization Automation Script</a></h1>
-    
-    <h2 id="description">Description</h2>
-    <p>
-        This script automates the process of organizing and managing files in specified directories. It categorizes files based on their types and moves older files to an archive folder, helping you maintain a well-organized file structure with minimal manual effort.
-    </p>
-
-    <h2 id="definition">Definition</h2>
-    <p>
-        File Organization Automation Script is available in two versions: a .bat script and a .ps1 script. Both scripts categorize files into different categories based on their file types and move files older than a specified threshold to an archive folder.
-    </p>
-
-    <h2 id="explanation-how-it-works-">Explanation (How It Works)</h2>
-    
-    <h3 id="-bat-script-batch-version-">.bat Script (Batch Version)</h3>
-    <ol>
-        <li>
-            <p><strong>File Categorization:</strong> The .bat script identifies the file type of each file based on its extension and categorizes it accordingly (e.g., images, documents, videos).</p>
-        </li>
-        <li>
-            <p><strong>Age-Based Archiving:</strong> Files are evaluated for their age. Files older than a defined threshold (default: 45 days) are moved to an archive folder within the respective category.</p>
-        </li>
-        <li>
-            <p><strong>Automatic Organization:</strong> The script creates destination directories for each file category in both "active" and "archive" directories. It then moves files to the appropriate category based on their file type and age.</p>
-        </li>
-    </ol>
-    
-    <h3 id="-ps1-script-powershell-version-">.ps1 Script (PowerShell Version)</h3>
-    <ol>
-        <li>
-            <p><strong>File Categorization:</strong> The .ps1 script identifies the file type of each file based on its extension and categorizes it accordingly (e.g., images, documents, videos).</p>
-        </li>
-        <li>
-            <p><strong>Age-Based Archiving:</strong> Files are evaluated for their age. Files older than a defined threshold (default: 45 days) are moved to an archive folder within the respective category.</p>
-        </li>
-        <li>
-            <p><strong>Automatic Organization:</strong> The script creates destination directories for each file category in both "active" and "archive" directories. It then moves files to the appropriate category based on their file type and age.</p>
-        </li>
-    </ol>
-
-    <h2 id="how-to-use">How to Use</h2>
-    
-    <h3 id="-bat-script-batch-version-">.bat Script (Batch Version)</h3>
-    <ol>
-        <li>
-            <p><strong>Download the Script:</strong> Download the <code>FileOrganization.bat</code> script to the directory you want to organize.</p>
-        </li>
-        <li>
-            <p><strong>Run the Script:</strong> Double-click the <code>FileOrganization.bat</code> script or run it using the command prompt.</p>
-        </li>
-        <li>
-            <p><strong>File Organization:</strong> The script will automatically categorize files in the source directory into appropriate categories based on their extensions and move older files to the archive directory as per the defined threshold.</p>
-        </li>
-    </ol>
-    
-    <h3 id="-ps1-script-powershell-version-">.ps1 Script (PowerShell Version)</h3>
-    <ol>
-        <li>
-            <p><strong>Download the Script:</strong> Download the <code>FileOrganization.ps1</code> script to the directory you want to organize.</p>
-        </li>
-        <li>
-            <p><strong>Run the Script:</strong> Open PowerShell, navigate to the directory containing the script, and run it using the following command:</p>
-            <pre><code class="lang-powershell">.\<span class="hljs-selector-tag">FileOrganization</span><span class="hljs-selector-class">.ps1</span></code></pre>
-        </li>
-        <li>
-            <p><strong>File Organization:</strong> The script will automatically categorize files in the source directory into appropriate categories based on their extensions and move older files to the archive directory as per the defined threshold.</p>
-        </li>
-        <li>
-            <p><strong>Customization (Optional):</strong> You can customize the script by modifying source/destination directories, the file age threshold, or add more conditions for file types and actions as needed.</p>
-        </li>
-    </ol>
-
-    <h2 id="flowchart">Flowchart</h2>
-    <pre class="mermaid">
-        graph LR
-
-        subgraph Source Directory
-          A[Start] --> B(Get Source Directory)
-          B --> C(Get Current Date)
-          C --> D(Process Files)
-        end
+    <div class="container">
+        <h1 id="file-organization-automation-script-readme"><a href="../index.html">File Organization Automation Script</a></h1>
         
-        subgraph Process Files
-          D --> E(Get File)
-          E --> F(Determine File Extension)
-          F --> G(Is File Type Recognized?)
-          G -->|No| H(Set File Category to Other)
-          G -->|Yes| I(Set File Category)
-          I --> J(Check File Age)
-          J -->|Older| K(Move to Archive Directory)
-          J -->|Not Older| L(Move to Active Directory)
-          H --> L(Move to Active Directory)
-          L --> E
-          K --> E
-          E -->|All Files Processed| M[End]
-        end
-        
-        subgraph Destination Directories
-          N[Active Directory]
-          O[Archive Directory]
-        end
-        
-        B -->|Set Directories| N
-        N -->|Set up Categories| O
-    </pre>
+        <section class="script-section">
+            <h2 id="description">Description</h2>
+            <p>
+                This script automates the process of organizing and managing files in specified directories. It categorizes files based on their types and moves older files to an archive folder, helping you maintain a well-organized file structure with minimal manual effort.
+            </p>
+        </section>
 
-    <h2 id="note">Note</h2>
-    <ul>
-        <li>Make sure to customize the script's source and destination directories to match your specific requirements.</li>
-        <li>The default file age threshold is set to 45 days. You can change it by modifying the <code>$daysThreshold</code> variable in the scripts.</li>
-        <li>These scripts use the Assoc command (in the .ps1 script) to determine file types based on file extensions. Ensure that file extensions are correctly associated with their respective programs on your system for accurate categorization.</li>
-    </ul>
+        <section class="script-section">
+            <h2 id="definition">Definition</h2>
+            <p>
+                File Organization Automation Script is available in two versions: a .bat script and a .ps1 script. Both scripts categorize files into different categories based on their file types and move files older than a specified threshold to an archive folder.
+            </p>
+        </section>
 
-    <hr>
+        <section class="script-section">
+            <h2 id="explanation-how-it-works-">Explanation (How It Works)</h2>
+            <h3 id="-bat-script-batch-version-">.bat Script (Batch Version)</h3>
+            <ol>
+                <li>
+                    <p><strong>File Categorization:</strong> The .bat script identifies the file type of each file based on its extension and categorizes it accordingly (e.g., images, documents, videos).</p>
+                </li>
+                <li>
+                    <p><strong>Age-Based Archiving:</strong> Files are evaluated for their age. Files older than a defined threshold (default: 45 days) are moved to an archive folder within the respective category.</p>
+                </li>
+                <li>
+                    <p><strong>Automatic Organization:</strong> The script creates destination directories for each file category in both "active" and "archive" directories. It then moves files to the appropriate category based on their file type and age.</p>
+                </li>
+            </ol>
+            
+            <h3 id="-ps1-script-powershell-version-">.ps1 Script (PowerShell Version)</h3>
+            <ol>
+                <li>
+                    <p><strong>File Categorization:</strong> The .ps1 script identifies the file type of each file based on its extension and categorizes it accordingly (e.g., images, documents, videos).</p>
+                </li>
+                <li>
+                    <p><strong>Age-Based Archiving:</strong> Files are evaluated for their age. Files older than a defined threshold (default: 45 days) are moved to an archive folder within the respective category.</p>
+                </li>
+                <li>
+                    <p><strong>Automatic Organization:</strong> The script creates destination directories for each file category in both "active" and "archive" directories. It then moves files to the appropriate category based on their file type and age.</p>
+                </li>
+            </ol>
+        </section>
 
-    <p>Enjoy automated file organization and keep your directories tidy!</p>
-    <p>For more information, refer to the script's comments and customization options within the script itself.</p>
+        <section class="script-section">
+            <h2 id="how-to-use">How to Use</h2>
+            
+            <h3 id="-bat-script-batch-version-">.bat Script (Batch Version)</h3>
+            <ol>
+                <li>
+                    <p><strong>Download the Script:</strong> Download the <code>FileOrganization.bat</code> script to the directory you want to organize.</p>
+                </li>
+                <li>
+                    <p><strong>Run the Script:</strong> Double-click the <code>FileOrganization.bat</code> script or run it using the command prompt.</p>
+                </li>
+                <li>
+                    <p><strong>File Organization:</strong> The script will automatically categorize files in the source directory into appropriate categories based on their extensions and move older files to the archive directory as per the defined threshold.</p>
+                </li>
+            </ol>
+            
+            <h3 id="-ps1-script-powershell-version-">.ps1 Script (PowerShell Version)</h3>
+            <ol>
+                <li>
+                    <p><strong>Download the Script:</strong> Download the <code>FileOrganization.ps1</code> script to the directory you want to organize.</p>
+                </li>
+                <li>
+                    <p><strong>Run the Script:</strong> Open PowerShell, navigate to the directory containing the script, and run it using the following command:</p>
+                    <pre><code class="lang-powershell">.\FileOrganization.ps1</code></pre>
+                </li>
+                <li>
+                    <p><strong>File Organization:</strong> The script will automatically categorize files in the source directory into appropriate categories based on their extensions and move older files to the archive directory as per the defined threshold.</p>
+                </li>
+                <li>
+                    <p><strong>Customization (Optional):</strong> You can customize the script by modifying source/destination directories, the file age threshold, or add more conditions for file types and actions as needed.</p>
+                </li>
+            </ol>
+        </section>
 
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    </script>
+        <section class="script-section">
+            <h2 id="flowchart">Flowchart</h2>
+            <pre class="mermaid">
+                graph LR
 
+                subgraph Source Directory
+                  A[Start] --> B(Get Source Directory)
+                  B --> C(Get Current Date)
+                  C --> D(Process Files)
+                end
+                
+                subgraph Process Files
+                  D --> E(Get File)
+                  E --> F(Determine File Extension)
+                  F --> G(Is File Type Recognized?)
+                  G -->|No| H(Set File Category to Other)
+                  G -->|Yes| I(Set File Category)
+                  I --> J(Check File Age)
+                  J -->|Older| K(Move to Archive Directory)
+                  J -->|Not Older| L(Move to Active Directory)
+                  H --> L(Move to Active Directory)
+                  L --> E
+                  K --> E
+                  E -->|All Files Processed| M[End]
+                end
+                
+                subgraph Destination Directories
+                  N[Active Directory]
+                  O[Archive Directory]
+                end
+                
+                B -->|Set Directories| N
+                N -->|Set up Categories| O
+            </pre>
+        </section>
+
+        <section class="script-section">
+            <h2 id="note">Note</h2>
+            <ul>
+                <li>Make sure to customize the script's source and destination directories to match your specific requirements.</li>
+                <li>The default file age threshold is set to 45 days. You can change it by modifying the <code>$daysThreshold</code> variable in the scripts.</li>
+                <li>These scripts use the Assoc command (in the .ps1 script) to determine file types based on file extensions. Ensure that file extensions are correctly associated with their respective programs on your system for accurate categorization.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <footer>
+            <p>Enjoy automated file organization and keep your directories tidy!</p>
+            <p>For more information, refer to the script's comments and customization options within the script itself.</p>
+        </footer>
+
+        <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        </script>
+    </div>
 </body>
 </html>
